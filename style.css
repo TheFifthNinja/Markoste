@@ -22,7 +22,7 @@
 
 #desc {
     text-align: center;
-    color: #4ac1e8;
+    color: #0073CF;
 }
 
 .detail {
@@ -30,7 +30,7 @@
     color: white;
     font-size: 28px;
     background-image: url('https://images.pexels.com/photos/1105766/pexels-photo-1105766.jpeg');
-    
+
     top: 0;
     right: 0;
     bottom: 0;
@@ -39,7 +39,7 @@
 }
 
 #quote {
-    color: #4ac1e8;
+    color: #0073CF;
     max-width: 500px;
     padding: 10px 20px;
     background: white;
@@ -48,6 +48,101 @@
     border-radius: 16px;
     font-size: 24px;
 }
+
+input {
+    width: 210px;
+    height: 50px;
+    padding: 0 16px;
+    background: transparent;
+    border-radius: 4px;
+    border: 1px solid #0073CF;
+    color: #0073CF;
+    box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+    animation: shake_541 0.14s 3;
+    font-size: 18px;
+}
+
+input:valid {
+    border-color: #0073CF;
+    animation: none;
+}
+
+@keyframes shake_541 {
+
+    0%,
+    100% {
+        translate: 0;
+    }
+
+    25% {
+        translate: 8px 0;
+    }
+
+    75% {
+        translate: -8px 0;
+    }
+}
+
+button {
+    position:relative;
+    display: flex;
+    justify-content:center;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    border: none;
+    font-size: 18px;
+}
+
+button:after {
+    content: " ";
+    width: 0%;
+    height: 100%;
+    background: #0073CF;
+    position: absolute;
+    transition: all 0.4s ease-in-out;
+    right: 0;
+}
+
+button:hover::after {
+    right: auto;
+    left: 0;
+    width: 100%;
+}
+
+button span {
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    padding: 18px 25px;
+    color: black;
+    font-size: 1.125em;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    z-index: 20;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover span {
+    color: #183153;
+    animation: scaleUp 0.3s ease-in-out;
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
 
 footer {
     text-align: center;
