@@ -1,5 +1,6 @@
 window.addEventListener("DOMContentLoaded", function() { 
     const yourForm = document.getElementById("quote");
+    const formDiv = document.getElementById("detail");
     yourForm.addEventListener("submit", function(e) { 
       e.preventDefault(); 
       const data = new FormData(yourForm); 
@@ -10,7 +11,16 @@ window.addEventListener("DOMContentLoaded", function() {
       }).then((response) => {
         response.json();
       }).then((data) => {
-          alert("Success!")
+          
+        const message = document.createElement('div');
+        message.classList.add("complete");
+        message.textContent = 'Thank you! We will contact you soon';
+        message.style.fontWeight = 'bold';
+        message.style.fontSize = '18px';
+        const lineBreak = document.createElement('br');
+        yourForm.remove();
+        formDiv.appendChild(message);
+        formDiv.appendChild(lineBreak);
       })
     })
   });
