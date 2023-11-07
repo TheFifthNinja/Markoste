@@ -1,0 +1,54 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    color: #0073CF;
+}
+
+#title {
+    text-align: center;
+}
+
+#intro {
+    background-color: white;
+    text-align: center;
+}
+
+#intro a {
+    font-size: 28px;
+}
+
+#intro h2 {
+    font-size: 50px;
+}
+
+#desc {
+    text-align: center;
+    color: #4ac1e8;
+}
+
+.detail {
+    text-align: center;
+    color: white;
+    font-size: 28px;
+    background-image: url('https://images.pexels.com/photos/1105766/pexels-photo-1105766.jpeg');
+    
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: relative;
+}
+
+#quote {
+    color: #4ac1e8;
+    max-width: 500px;
+    padding: 10px 20px;
+    background: white;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 16px;
+    font-size: 24px;
+}
+
+footer {
+    text-align: center;
+}
