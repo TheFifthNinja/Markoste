@@ -20,15 +20,56 @@
     font-size: 50px;
 }
 
-#desc {
+.desc {
     text-align: center;
     color: #128FC8;
     width: 100%;
-    height: 700px;
 }
 
-#desc p{
+.desc h2{
+    font-size: 50px;
+    color: #183153;
+}
+
+.desc strong{
+    color: #128FC8;
+}
+
+.desc p{
     font-size: 30px;
+    text-align: center;
+    right: 12.5%;
+    left: 12.5%;
+}
+
+.process {
+    text-align: center;
+    display: inline;
+}
+
+.process h2{
+    font-size: 50px;
+    color: #183153;
+}
+
+.process strong{
+    color: #128FC8;
+}
+
+#process li{
+    display: inline-table;
+    width: 30%;
+    padding: 0%;
+}
+
+.process img{
+    width: 50px;
+    height: 50px;
+}
+
+.process h3{
+    font-size: 20px;
+    color: #183153;
 }
 
 .detail {
