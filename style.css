@@ -3,6 +3,10 @@
     color: #128FC8;
 }
 
+body{
+    margin: 0;
+}
+
 #title {
     text-align: center;
 }
@@ -22,20 +26,22 @@
 
 .desc {
     text-align: center;
+    text-justify: inter-word;
     color: #128FC8;
     width: 100%;
+    background-color: rgb(228, 225, 225);
 }
 
-.desc h2{
+.desc h2 {
     font-size: 50px;
     color: #183153;
 }
 
-.desc strong{
+.desc strong {
     color: #128FC8;
 }
 
-.desc p{
+.desc p {
     font-size: 30px;
     text-align: center;
     right: 12.5%;
@@ -47,29 +53,40 @@
     display: inline;
 }
 
-.process h2{
+.process h2 {
     font-size: 50px;
     color: #183153;
 }
 
-.process strong{
+.process strong {
     color: #128FC8;
 }
 
-#process li{
+#process li {
     display: inline-table;
+    margin-right: 20px;
     width: 30%;
     padding: 0%;
+    background-color: rgb(228, 225, 225);
+    height: 100px;
+    box-sizing: border-box;
+    border-radius: 16px;
 }
 
-.process img{
+.process img {
     width: 50px;
     height: 50px;
 }
 
-.process h3{
+.process h3 {
     font-size: 20px;
     color: #183153;
+}
+
+.process p{
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
 }
 
 .detail {
@@ -209,3 +226,56 @@ button:hover span {
 footer {
     text-align: center;
 }
+
+.footImg li{
+    display: inline-table;
+    margin-right: 20px;
+    width: 200px;
+    padding: 0%;
+    height: 70px;
+    box-sizing: border-box;
+}
+
+.footImg img{
+    width: 100px;
+}
+
+.footImg h4{
+    color: #183153;
+}
+
+.loader {
+    display: block;
+    --height-of-loader: 4px;
+    --loader-color: #128FC8;
+    width: 100%;
+    height: var(--height-of-loader);
+    border-radius: 30px;
+    background-color: rgba(0,0,0,0.2);
+    position: relative;
+  }
+  
+  .loader::before {
+    content: "";
+    position: absolute;
+    background: var(--loader-color);
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    border-radius: 30px;
+    animation: moving 3s ease-in-out infinite;
+    ;
+  }
+  
+  @keyframes moving {
+    50% {
+      width: 100%;
+    }
+  
+    100% {
+      width: 0;
+      right: 0;
+      left: unset;
+    }
+  }
