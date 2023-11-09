@@ -3,13 +3,71 @@
     color: #128FC8;
 }
 
-body{
+body {
     margin: 0;
 }
 
-#title {
+.title {
     text-align: center;
 }
+
+#intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+  }
+
+.scroll {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #128FC8;
+    border-radius: 50%;
+    position: relative;
+    animation: down 1.5s infinite;
+    -webkit-animation: down 1.5s infinite;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 15px;
+        left: 18px;
+        width: 18px;
+        height: 18px;
+        border-left: 2px solid #128FC8;
+        border-bottom: 2px solid #128FC8;
+        transform: rotate(-45deg);
+    }
+}
+
+@keyframes down {
+    0% {
+        transform: translate(0);
+    }
+
+    20% {
+        transform: translateY(25px);
+    }
+
+    40% {
+        transform: translate(0);
+    }
+}
+
+@-webkit-keyframes down {
+    0% {
+        transform: translate(0);
+    }
+
+    20% {
+        transform: translateY(15px);
+    }
+
+    40% {
+        transform: translate(0);
+    }
+}
+
 
 #intro {
     background-color: white;
@@ -83,7 +141,7 @@ body{
     color: #183153;
 }
 
-.process p{
+.process p {
     margin-left: 5%;
     margin-right: 5%;
     text-align: center;
@@ -227,7 +285,7 @@ footer {
     text-align: center;
 }
 
-.footImg li{
+.footImg li {
     display: inline-table;
     margin-right: 20px;
     width: 200px;
@@ -236,11 +294,11 @@ footer {
     box-sizing: border-box;
 }
 
-.footImg img{
+.footImg img {
     width: 100px;
 }
 
-.footImg h4{
+.footImg h4 {
     color: #183153;
 }
 
@@ -251,11 +309,11 @@ footer {
     width: 100%;
     height: var(--height-of-loader);
     border-radius: 30px;
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0, 0, 0, 0.2);
     position: relative;
-  }
-  
-  .loader::before {
+}
+
+.loader::before {
     content: "";
     position: absolute;
     background: var(--loader-color);
@@ -266,16 +324,16 @@ footer {
     border-radius: 30px;
     animation: moving 3s ease-in-out infinite;
     ;
-  }
-  
-  @keyframes moving {
+}
+
+@keyframes moving {
     50% {
-      width: 100%;
+        width: 100%;
     }
-  
+
     100% {
-      width: 0;
-      right: 0;
-      left: unset;
+        width: 0;
+        right: 0;
+        left: unset;
     }
-  }
+}
