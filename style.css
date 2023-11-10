@@ -37,7 +37,7 @@ html {
         content: '';
         position: absolute;
         top: 15px;
-        left: 18px;
+        left: 19.5px;
         width: 18px;
         height: 18px;
         border-left: 2px solid #128FC8;
@@ -52,7 +52,7 @@ html {
     }
 
     20% {
-        transform: translateY(25px);
+        transform: translateY(20px);
     }
 
     40% {
@@ -90,7 +90,6 @@ html {
 
 .desc {
     text-align: center;
-    text-justify: inter-word;
     color: #128FC8;
     width: 100%;
     background-color: rgb(228, 225, 225);
@@ -108,8 +107,8 @@ html {
 .desc p {
     font-size: 30px;
     text-align: center;
-    right: 12.5%;
-    left: 12.5%;
+    max-width: 600px;
+    margin: 0 auto;    
 }
 
 .process {
@@ -157,12 +156,22 @@ html {
     text-align: center;
     color: white;
     font-size: 28px;
-    background-image: url('https://images.pexels.com/photos/1105766/pexels-photo-1105766.jpeg');
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     position: relative;
+}
+
+.detail img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    z-index: -1;
+    opacity: 25%;
 }
 
 #quote {
