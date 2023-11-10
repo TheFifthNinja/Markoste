@@ -7,6 +7,11 @@ body {
     margin: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+
 .title {
     text-align: center;
 }
@@ -15,9 +20,9 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; 
-  }
-  
+    align-items: center;
+}
+
 
 .scroll {
     width: 60px;
