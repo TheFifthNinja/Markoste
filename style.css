@@ -22,13 +22,14 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 570px;
 }
 
 
 .scroll {
     width: 60px;
     height: 60px;
-    border: 2px solid #128FC8;
+    border: 2px solid white;
     border-radius: 50%;
     position: relative;
     animation: down 1.5s infinite;
@@ -41,8 +42,8 @@ html {
         left: 19.5px;
         width: 18px;
         height: 18px;
-        border-left: 2px solid #128FC8;
-        border-bottom: 2px solid #128FC8;
+        border-left: 2px solid white;
+        border-bottom: 2px solid white;
         transform: rotate(-45deg);
     }
 }
@@ -77,23 +78,20 @@ html {
 
 
 #intro {
-    background-color: white;
+    background-color: #128FC8;
     text-align: center;
-}
-
-#intro a {
-    font-size: 28px;
 }
 
 #intro h2 {
     font-size: 50px;
+    color: white;
 }
 
 .desc {
     text-align: center;
     color: #128FC8;
     width: 100%;
-    background-color: rgb(228, 225, 225);
+    background-color: #F1F6F9;
 }
 
 .desc h2 {
@@ -131,7 +129,7 @@ html {
     margin-right: 20px;
     width: 30%;
     padding: 0%;
-    background-color: rgb(228, 225, 225);
+    background-color: #DFEBF1;
     height: 100px;
     box-sizing: border-box;
     border-radius: 16px;
@@ -173,7 +171,7 @@ html {
     height: 100%;
     object-fit: cover; 
     z-index: -1;
-    opacity: 25%;
+    opacity: 15%;
 }
 
 #quote {
@@ -231,7 +229,7 @@ button {
     display: flex;
     justify-content: center;
     border-radius: 12px;
-    background: white;
+    background: #128FC8;
     box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     border: none;
@@ -239,11 +237,19 @@ button {
     cursor: pointer;
 }
 
+#submit-button{
+    background: white;
+}
+
+#submit-button:after{
+    background: #128FC8;
+}
+
 button:after {
     content: " ";
     width: 0%;
     height: 100%;
-    background: #128FC8;
+    background: white;
     position: absolute;
     transition: all 0.4s ease-in-out;
     right: 0;
@@ -302,6 +308,10 @@ footer {
     text-align: center;
 }
 
+#footImg {
+    background-color: #DFEBF1;
+}
+
 .footImg li {
     display: inline-table;
     margin-right: 20px;
@@ -326,7 +336,7 @@ footer {
     width: 100%;
     height: var(--height-of-loader);
     border-radius: 30px;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: #DFEBF1;
     position: relative;
 }
 
