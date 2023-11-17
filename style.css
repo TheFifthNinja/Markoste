@@ -177,6 +177,10 @@ html {
     position: relative;
 }
 
+.detail h1, h2{
+    font-weight: 900;
+}
+
 .detail img{
     position: absolute;
     top: 0;
