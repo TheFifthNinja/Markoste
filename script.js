@@ -37,3 +37,28 @@ function smoothScroll(target) {
     });
   }
 };
+
+document.addEventListener("DOMContentLoaded", function() {
+  var listItems = document.querySelectorAll(".process li");
+
+  var options = {
+    root: null, 
+    rootMargin: "0px",
+    threshold: 0.5 
+  };
+
+  var observer = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(function(entry, index) {
+      if (entry.isIntersecting) {
+        setTimeout(function() {
+          entry.target.classList.add("fade-in");
+        }, index * 700); 
+        observer.unobserve(entry.target);
+      }
+    });
+  }, options);
+
+  listItems.forEach(function(item) {
+    observer.observe(item);
+  });
+});
