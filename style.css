@@ -97,7 +97,7 @@ html {
 #intro h3{
     color: white;
     font-size: 36px;
-    margin-bottom: 10px;
+    margin-bottom: 00px;
 }
 
 .desc {
@@ -107,9 +107,11 @@ html {
     background-color: #F1F6F9;
 }
 
+
 .desc h2 {
     font-size: 50px;
     color: #183153;
+    margin-top: 1%;
 }
 
 .desc strong {
@@ -121,7 +123,13 @@ html {
     text-align: center;
     max-width: 85%;
     margin: 0 auto;
-    color: black;    
+    color: black;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;    
+}
+
+.desc p.fade-in {
+    opacity: 1;
 }
 
 .process {
@@ -130,6 +138,7 @@ html {
 }
 
 .process h2 {
+    margin-top: 10px;
     font-size: 50px;
     color: #183153;
 }
@@ -215,6 +224,11 @@ html {
     align-items: center;
     justify-content: center;
     text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+#quote.fade-in {
+    opacity: 1;
 }
 
 input {
@@ -224,7 +238,7 @@ input {
     background: transparent;
     border-radius: 12px;
     border: 1px solid #128FC8;
-    color: #128FC8;
+    color: black;
     box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
     animation: shake_541 0.14s 3;
     font-size: 18px;
@@ -269,7 +283,7 @@ button {
 }
 
 #submit-button:after{
-    background: #128FC8;
+    background: #FFE3BB;
 }
 
 button:after {
@@ -346,6 +360,12 @@ footer {
     padding: 0%;
     height: 70px;
     box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.footImg li.fade-in {
+ opacity: 1; 
 }
 
 .footImg img {
