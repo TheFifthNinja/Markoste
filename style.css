@@ -86,7 +86,11 @@ html {
 
 
 #intro {
-    background-color: #128FC8;
+    background: hsla(217, 100%, 50%, 1);
+    background: linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#0061FF", endColorstr="#60EFFF", GradientType=1);
     text-align: center;
 }
 
@@ -112,16 +116,15 @@ html {
     width: 100%;
     background-color: #F1F6F9;
     position: relative;
+    display: grid;
 }
 
-.desc_text {
-    padding: 20px;
-}
 
 .desc h2 {
     font-size: 50px;
     color: #183153;
-    margin-top: 1%;
+    margin-top: 5%;
+    margin-left: 9em;
 }
 
 .desc strong {
@@ -131,12 +134,13 @@ html {
 .desc p {
     font-size: 2em;
     text-align: justify;
-    margin-left: 30px;
+    margin-left: 20em;
     max-width: 45%;
     color: black;
     opacity: 0;
-    transform: translateX(-5%);
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;;
+    transform: translateX(5%);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    margin-top: -50px;
 }
 
 .desc p.fade-in {
@@ -145,22 +149,28 @@ html {
 }
 
 @media screen and (max-width: 1000px) {
+    .desc h2{
+        margin-right: 30px;
+    }
     .desc p {
-        font-size: 1.5em;
+        font-size: 1.4em;
+        margin-right: 30px;
+    }
+    .desc img{
+        width: 55%;
     }
 }
 
 .desc img {
     position: absolute;
-    right: 0px;
-    width: 50%;
-    top: 100px;
-    height: 455px;
+    height: 99%;
     z-index: 2;
+    margin-right: 85%;
 }
+
 #desc_image {
     opacity: 0;
-    transform: translateX(5%);
+    transform: translateX(-5%);
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
