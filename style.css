@@ -26,7 +26,7 @@ html {
     height: 570px;
 }
 
-#hql{
+#hql {
     color: #FFE3BB;
     font-weight: 900;
 }
@@ -53,6 +53,8 @@ html {
         transform: rotate(-45deg);
     }
 }
+
+
 
 @keyframes down {
     0% {
@@ -94,10 +96,14 @@ html {
     margin-top: 10px;
 }
 
-#intro h3{
+#intro h3 {
     color: white;
     font-size: 36px;
-    margin-bottom: 00px;
+    margin-bottom: 0px;
+}
+
+#desc {
+    height: 605px;
 }
 
 .desc {
@@ -105,8 +111,12 @@ html {
     color: #128FC8;
     width: 100%;
     background-color: #F1F6F9;
+    position: relative;
 }
 
+.desc_text {
+    padding: 20px;
+}
 
 .desc h2 {
     font-size: 50px;
@@ -119,17 +129,44 @@ html {
 }
 
 .desc p {
-    font-size: 30px;
-    text-align: center;
-    max-width: 85%;
-    margin: 0 auto;
+    font-size: 2em;
+    text-align: justify;
+    margin-left: 30px;
+    max-width: 45%;
     color: black;
     opacity: 0;
-    transition: opacity 0.5s ease-in-out;    
+    transform: translateX(-5%);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;;
 }
 
 .desc p.fade-in {
     opacity: 1;
+    transform: translateX(0);
+}
+
+@media screen and (max-width: 1000px) {
+    .desc p {
+        font-size: 1.5em;
+    }
+}
+
+.desc img {
+    position: absolute;
+    right: 0px;
+    width: 50%;
+    top: 100px;
+    height: 455px;
+    z-index: 2;
+}
+#desc_image {
+    opacity: 0;
+    transform: translateX(5%);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+#desc_image.fade-in {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .process {
@@ -195,17 +232,18 @@ html {
     position: relative;
 }
 
-.detail h1, h2{
+.detail h1,
+h2 {
     font-weight: 900;
 }
 
-.detail img{
+.detail img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+    object-fit: cover;
     z-index: -1;
     opacity: 15%;
 }
@@ -227,6 +265,7 @@ html {
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
 }
+
 #quote.fade-in {
     opacity: 1;
 }
@@ -278,12 +317,12 @@ button {
     cursor: pointer;
 }
 
-#submit-button{
-    background: white;
+#submit-button {
+    background: #FFE3BB;
 }
 
-#submit-button:after{
-    background: #FFE3BB;
+#submit-button:after {
+    background: white;
 }
 
 button:after {
@@ -365,7 +404,7 @@ footer {
 }
 
 .footImg li.fade-in {
- opacity: 1; 
+    opacity: 1;
 }
 
 .footImg img {

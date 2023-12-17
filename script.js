@@ -43,6 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
   var desc = document.querySelectorAll(".desc p");
   var form = document.getElementById("quote");
   var footImg = document.querySelectorAll(".footImg li");
+  var descImg = document.getElementById("desc_image")
 
   var options = {
     root: null, 
@@ -83,4 +84,6 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   observe_single.observe(form);
+
+  observe_single.observe(descImg);  
 });
