@@ -1,5 +1,5 @@
 * {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'DM Serif Display', serif;
     color: #128FC8;
     font-weight: 500;
 }
@@ -179,10 +179,6 @@ html {
 .process {
     text-align: center;
     display: inline;
-}
-
-#process {
-    background: -webkit-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
 }
 
 .process h2 {
