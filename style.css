@@ -23,7 +23,7 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 570px;
+    height: 600px;
 }
 
 #hql {
@@ -145,18 +145,7 @@ html {
     transform: translateX(0);
 }
 
-@media screen and (max-width: 1000px) {
-    .desc h2{
-        margin-right: 30px;
-    }
-    .desc p {
-        font-size: 1.4em;
-        margin-right: 30px;
-    }
-    .desc img{
-        width: 55%;
-    }
-}
+
 
 .desc img {
     position: absolute;
@@ -457,5 +446,56 @@ footer {
         width: 0;
         right: 0;
         left: unset;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .desc h2 {
+        margin-right: 30px;
+    }
+
+    .desc p {
+        font-size: 1.4em;
+        margin-right: 30px;
+    }
+
+    .desc img {
+        width: 55%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+
+    .intro {
+        margin: 0 auto;
+    }
+
+    .intro h3{
+        margin-top: 60px;
+    }
+
+    .intro button {
+        z-index: 1;
+    }
+
+    .desc {
+        margin: 0 auto;
+        font-size: 12px;
+    }
+
+    .desc h2 {
+        margin: 0 auto;
+    }
+
+    .desc p{
+        margin: 0 auto;
+        font-size: 20px;
+        text-align: center;
+        max-width: 100%;
+        width: 80%;
+    }
+
+    .desc img {
+        display: none;
     }
 }
