@@ -180,7 +180,7 @@ html {
     color: #128FC8;
 }
 
-#process li {
+#desktop-list li {
     display: inline-table;
     margin-right: 10px;
     width: 30%;
@@ -192,12 +192,12 @@ html {
     margin-bottom: 10px;
 }
 
-.process li {
+.desktop-list li {
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
 }
 
-.process li.fade-in {
+.desktop-list li.fade-in {
     opacity: 1;
 }
 
@@ -206,17 +206,21 @@ html {
     height: 50px;
 }
 
-.process h3 {
+.desktop-list h3 {
     font-size: 20px;
     color: #183153;
 }
 
-.process p {
+.desktop-list p {
     margin-left: 5%;
     margin-right: 5%;
     text-align: center;
     font-size: 18px;
     color: white;
+}
+
+.mobile-list {
+    display: none;
 }
 
 .detail {
@@ -470,7 +474,7 @@ footer {
         margin: 0 auto;
     }
 
-    .intro h3{
+    .intro h3 {
         margin-top: 60px;
     }
 
@@ -487,7 +491,7 @@ footer {
         margin: 0 auto;
     }
 
-    .desc p{
+    .desc p {
         margin: 0 auto;
         font-size: 20px;
         text-align: center;
@@ -497,5 +501,63 @@ footer {
 
     .desc img {
         display: none;
+    }
+
+    .mobile-list {
+        display: flex;
+        margin: 0;
+        padding-inline: 0px;
+        list-style-type: none;
+        gap: 1rem;
+        width: max-content;
+        flex-wrap: nowrap;
+        animation: scroll 30s linear infinite;
+    }
+
+    .mobile-list li {
+        padding: 1rem;
+        background: -webkit-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+        border-radius: 0.5rem;
+        width: 200px;
+        box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    .mobile-list p {
+        color: #FFE3BB;
+    }
+
+    .scroller {
+        overflow: hidden;
+        -webkit-mask:
+            linear-gradient(90deg,
+                transparent,
+                white 5%,
+                white 95%,
+                transparent);
+        mask:
+            linear-gradient(90deg,
+                transparent,
+                white 5%,
+                white 95%,
+                transparent);
+    }
+
+    @keyframes scroll {
+        to {
+            transform: translate(calc(-50% - 0.5rem));
+        }
+    }
+
+
+    .desktop-list {
+        display: none;
+    }
+
+    .detail h1 {
+        font-size: 40px;
+    }
+
+    .detail h2 {
+        font-size: 32px;
     }
 }

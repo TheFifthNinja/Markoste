@@ -38,7 +38,7 @@ function smoothScroll(target) {
   }
 };
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   var process = document.querySelectorAll(".process li");
   var desc = document.querySelectorAll(".desc p");
   var form = document.getElementById("quote");
@@ -46,24 +46,24 @@ document.addEventListener("DOMContentLoaded", function() {
   var descImg = document.getElementById("desc_image")
 
   var options = {
-    root: null, 
+    root: null,
     rootMargin: "0px",
-    threshold: 0.01 
+    threshold: 0.01
   };
 
-  var observer_multiple = new IntersectionObserver(function(entries, observer) {
-    entries.forEach(function(entry, index) {
+  var observer_multiple = new IntersectionObserver(function (entries, observer) {
+    entries.forEach(function (entry, index) {
       if (entry.isIntersecting) {
-        setTimeout(function() {
+        setTimeout(function () {
           entry.target.classList.add("fade-in");
-        }, index * 700); 
+        }, index * 700);
         observer.unobserve(entry.target);
       }
     });
   }, options);
 
-  var observe_single = new IntersectionObserver(function(entries, observer) {
-    entries.forEach(function(entry) {
+  var observe_single = new IntersectionObserver(function (entries, observer) {
+    entries.forEach(function (entry) {
       if (entry.isIntersecting) {
         entry.target.classList.add("fade-in");
         observer.unobserve(entry.target);
@@ -71,19 +71,20 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }, options);
 
-  process.forEach(function(item) {
+  process.forEach(function (item) {
     observer_multiple.observe(item);
   });
 
-  footImg.forEach(function(item) {
+  footImg.forEach(function (item) {
     observer_multiple.observe(item);
   });
 
-  desc.forEach(function(item) {
+  desc.forEach(function (item) {
     observe_single.observe(item);
   });
 
   observe_single.observe(form);
 
-  observe_single.observe(descImg);  
+  observe_single.observe(descImg);
 });
+
