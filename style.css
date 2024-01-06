@@ -468,106 +468,6 @@ footer {
     }
 }
 
-@media screen and (max-width: 400px) {
-
-    .intro {
-        margin: 0 auto;
-    }
-
-    .intro h3 {
-        margin-top: 60px;
-        font-size: 28px !important;
-    }
-
-    .intro h2 {
-        font-size: 42px !important;
-    }
-
-    .intro button {
-        z-index: 1;
-    }
-
-    .desc {
-        margin: 0 auto;
-        font-size: 12px;
-    }
-
-    .desc h2 {
-        margin: 0 auto;
-    }
-
-    .desc p {
-        margin: 0 auto;
-        font-size: 20px;
-        text-align: center;
-        max-width: 100%;
-        width: 80%;
-    }
-
-    .desc img {
-        display: none;
-    }
-
-    .mobile-list {
-        display: flex;
-        margin: 0;
-        padding-inline: 0px;
-        list-style-type: none;
-        gap: 1rem;
-        width: max-content;
-        flex-wrap: nowrap;
-        animation: scroll 30s linear infinite;
-    }
-
-    .mobile-list li {
-        padding: 1rem;
-        background: -webkit-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
-        border-radius: 0.5rem;
-        width: 200px;
-        box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
-    }
-    .mobile-list h3{
-        color: #183153;
-    }
-    .mobile-list p {
-        color: #FFE3BB;
-    }
-
-    .scroller {
-        overflow: hidden;
-        -webkit-mask:
-            linear-gradient(90deg,
-                transparent,
-                white 5%,
-                white 95%,
-                transparent);
-        mask:
-            linear-gradient(90deg,
-                transparent,
-                white 5%,
-                white 95%,
-                transparent);
-    }
-
-    @keyframes scroll {
-        to {
-            transform: translate(calc(-50% - 0.5rem));
-        }
-    }
-
-
-    .desktop-list {
-        display: none;
-    }
-
-    .detail h1 {
-        font-size: 40px;
-    }
-
-    .detail h2 {
-        font-size: 32px;
-    }
-}
 
 @media screen and (max-width: 768px) {
 
@@ -628,7 +528,7 @@ footer {
         box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
     }
     .mobile-list h3{
-        color: #183153;
+        color: white;
     }
     .mobile-list p {
         color: #FFE3BB;
@@ -650,11 +550,7 @@ footer {
                 transparent);
     }
 
-    @keyframes scroll {
-        to {
-            transform: translate(calc(-50% - 0.5rem));
-        }
-    }
+    
 
 
     .desktop-list {
@@ -667,5 +563,42 @@ footer {
 
     .detail h2 {
         font-size: 32px;
+    }
+
+    .desktop-tags{
+        display: none !important;
+    }
+
+    .tags{
+        display: flex;
+        margin: 0;
+        padding-inline: 0px;
+        list-style-type: none;
+        gap: 1rem;
+        width: max-content;
+        flex-wrap: nowrap;
+        animation: scroll 30s linear infinite;
+    }
+
+    .scroller {
+        overflow: hidden;
+        -webkit-mask:
+            linear-gradient(90deg,
+                transparent,
+                white 5%,
+                white 95%,
+                transparent);
+        mask:
+            linear-gradient(90deg,
+                transparent,
+                white 5%,
+                white 95%,
+                transparent);
+    }
+    
+    @keyframes scroll {
+        to {
+            transform: translate(calc(-50% - 0.5rem));
+        }
     }
 }
