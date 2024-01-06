@@ -417,7 +417,7 @@ footer {
     color: #183153;
 }
 
-.scroller2{
+.tags{
     display: none;
 }
 
@@ -539,6 +539,54 @@ footer {
     }
 
     .scroller {
+        overflow: hidden ;
+        -webkit-mask:
+            linear-gradient(90deg,
+                transparent,
+                white 5%,
+                white 95%,
+                transparent);
+        mask:
+            linear-gradient(90deg,
+                transparent,
+                white 5%,
+                white 95%,
+                transparent);
+    }
+
+
+    .desktop-list {
+        display: none;
+    }
+
+    .detail h1 {
+        font-size: 40px;
+    }
+
+    .detail h2 {
+        font-size: 32px;
+    }
+
+    .desktop-tags{
+        display: none;
+    }
+
+    .tags{
+        display: flex !important;
+        padding-top: 20px;
+        margin: 0;
+        padding-inline: 0px;
+        list-style-type: none;
+        gap: 1rem;
+        width: max-content;
+        flex-wrap: nowrap;
+        animation: scroll 30s linear infinite;
+    }
+    .tags li {
+        padding: 1rem;
+    }
+
+    .scroller2 {
         overflow: hidden;
         -webkit-mask:
             linear-gradient(90deg,
@@ -555,50 +603,6 @@ footer {
     }
 
     
-
-
-    .desktop-list {
-        display: none;
-    }
-
-    .detail h1 {
-        font-size: 40px;
-    }
-
-    .detail h2 {
-        font-size: 32px;
-    }
-
-    .desktop-tags{
-        display: none !important;
-    }
-
-    .tags{
-        display: flex;
-        margin: 0;
-        padding-inline: 0px;
-        list-style-type: none;
-        gap: 1rem;
-        width: max-content;
-        flex-wrap: nowrap;
-        animation: scroll 30s linear infinite;
-    }
-
-    .scroller {
-        overflow: hidden;
-        -webkit-mask:
-            linear-gradient(90deg,
-                transparent,
-                white 5%,
-                white 95%,
-                transparent);
-        mask:
-            linear-gradient(90deg,
-                transparent,
-                white 5%,
-                white 95%,
-                transparent);
-    }
     
     @keyframes scroll {
         to {
