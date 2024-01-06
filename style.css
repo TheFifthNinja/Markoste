@@ -460,11 +460,11 @@ footer {
 
     .desc p {
         font-size: 1.4em;
-        margin-right: 30px;
+        margin-right: 10px;
     }
 
     .desc img {
-        width: 55%;
+        width: 50%;
     }
 }
 
