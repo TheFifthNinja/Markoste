@@ -417,6 +417,10 @@ footer {
     color: #183153;
 }
 
+.scroller2{
+    display: none;
+}
+
 .loader {
     display: block;
     --height-of-loader: 4px;
